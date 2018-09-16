@@ -10,6 +10,10 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   name.textContent = beer.name;
   beerDetail.appendChild(name);
 
+  const beer_img = new Image(60, 150);
+  beer_img.src = beer.image_url;
+  beerDetail.appendChild(beer_img);
+
   const tagline = document.createElement('p');
   tagline.textContent = beer.tagline;
   beerDetail.appendChild(tagline);
