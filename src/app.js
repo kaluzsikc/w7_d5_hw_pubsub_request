@@ -3,9 +3,10 @@ const BeerListView = require('./views/beer_list_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const beerLisView = new BeerListView;
+  const beerListContainer = document.querySelector('#beer-list');
+  const beerLisView = new BeerListView(beerListContainer);
   beerLisView.bindEvents();
 
-  const beers = new Beers;
+  const beers = new Beers();
   beers.getData();
 })
