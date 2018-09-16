@@ -8,8 +8,8 @@ const BeerListView = function(container){
 BeerListView.prototype.bindEvents = function () {
   PubSub.subscribe('Beers:beers-ready', (e) => {
     this.renderBeerDetailViews(e.detail);
-    // const data = event.detail;
-    // console.log('Subscribed data:', data);
+    const data = event.detail;
+    console.log('Subscribed data:', data);
   })
 };
 
